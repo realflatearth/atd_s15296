@@ -1,0 +1,20 @@
+db.people.insertOne(
+  {"sex": "Male",
+  "first_name": "Jakub",
+  "last_name": "Jagiełło",
+  "job": "Power BI Developer",
+  "email": "jjagiel@siema.com",
+  "location": 
+    {"city": "Warszawa",
+     "address": {"streetname": "Wyszyńskiego", "streetnumber": "10"}},
+  "description": "tutaj jest opis",
+  "height": "192.50",
+  "weight": "78",
+  "birth_date": "1997-02-02",
+  "nationality": "Polska",
+  "credit":
+    {"type": "visa",
+      "number": "5006666669445555",
+      "currency": "PLN",
+      "balance": "1068978576.20"}}
+)
