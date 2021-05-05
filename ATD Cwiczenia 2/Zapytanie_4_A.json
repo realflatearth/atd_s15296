@@ -1,0 +1,44 @@
+[{
+    $group: {
+        _id: "$nationality",
+        BMImin: {
+            $min: {
+                $divide: [{
+                    $toDouble: "$weight"
+                }, {
+                    $pow: [{
+                        $divide: [{
+                            $toDouble: "$height"
+                        }, 100]
+                    }, 2]
+                }]
+            }
+        },
+        BMIavg: {
+            $avg: {
+                $divide: [{
+                    $toDouble: "$weight"
+                }, {
+                    $pow: [{
+                        $divide: [{
+                            $toDouble: "$height"
+                        }, 100]
+                    }, 2]
+                }]
+            }
+        },
+        BMImax: {
+            $max: {
+                $divide: [{
+                    $toDouble: "$weight"
+                }, {
+                    $pow: [{
+                        $divide: [{
+                            $toDouble: "$height"
+                        }, 100]
+                    }, 2]
+                }]
+            }
+        }
+    }
+}]
