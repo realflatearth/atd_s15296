@@ -1,0 +1,34 @@
+1.
+MATCH (mov:Movie)
+RETURN mov
+
+2.
+MATCH (per:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoWeavinsMovies)
+RETURN per, hugoWeavinsMovies
+
+3.
+MATCH (per:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(hugoWeavinsMovies)<-[:DIRECTED]-(Director)
+RETURN per, hugoWeavinsMovies, Director
+
+4.
+MATCH (per:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(mov:Movie)<-[:ACTED_IN]-(co:Person)
+RETURN mov, per, co
+
+5.
+MATCH (per:Person)-[:ACTED_IN]->(mov:Movie)<-[:ACTED_IN]-(per2:Person)-[:ACTED_IN]->(mov2:Movie)
+WHERE mov.title CONTAINS 'Matrix'
+RETURN mov2, per2
+
+6.
+MATCH (per:Person)-[:ACTED_IN]->(mov:Movie)
+RETURN per, COUNT(*) AS moviesActed
+
+7.
+MATCH (per:Person)-[:WROTE]->(mov:Movie)<-[:DIRECTED]-(per:Person)
+RETURN per, mov
+
+8.
+MATCH (per:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(mov:Movie)<-[:ACTED_IN]-(per2:Person {name: "Keanu Reeves"})
+RETURN mov
+
+9.
