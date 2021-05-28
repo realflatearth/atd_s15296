@@ -1,0 +1,37 @@
+1.
+MATCH (darjeeling {name: 'Darjeeling'}), (sandakphu {name: 'Sandakphu'}),
+result = allShortestPaths((darjeeling)-[*]-(sandakphu))
+RETURN result
+
+2.
+MATCH (darjeeling {name: 'Darjeeling' }), (sandakphu {name: 'Sandakphu'}),
+result = allShortestPaths((darjeeling)-[*]-(sandakphu))
+WHERE ALL (r IN relationships(result) WHERE r.winter = "true")
+RETURN result
+
+3.
+MATCH r=(start:town {name: 'Darjeeling'})-[*]->(end:peak {name: 'Sandakphu'})
+WITH r, REDUCE(w=0, x IN relationships(r) | w+x.distance) AS distance
+RETURN r, distance
+ORDER BY distance ASC
+
+4.
+MATCH (fli:Flight)-[r:ORIGIN]->(air:Airport)
+RETURN air, count(r) as departures
+ORDER BY departures ASC
+
+5.
+MATCH trip=(origin:Airport {name: "LAX"})<-[r:ORIGIN|DESTINATION*..5]->(destination:Airport)
+WHERE REDUCE(s=0, n IN [x IN NODES(trip) WHERE 'Flight' IN LABELS(x)] | s+[(n)<-[:ASSIGN]-(ticket) | ticket.price][0]) < 3000
+RETURN trip
+
+6.
+MATCH trip=(origin:Airport {name:"LAX"})<-[r:ORIGIN|DESTINATION*..6]->(destination:Airport {name: "DAY"})
+RETURN trip, REDUCE(s=0, n IN [x IN NODES(trip) WHERE 'Flight' IN LABELS(x)] | s+[(n)<-[:ASSIGN]-(ticket) | ticket.price][0]) as connection
+ORDER BY connection ASC
+
+7.
+MATCH trip=(origin:Airport {name:"LAX"})<-[r:ORIGIN|DESTINATION*..6]->(destination:Airport {name: "DAY"})
+RETURN trip, REDUCE(s=0, n IN [x IN NODES(trip) WHERE 'Flight' IN LABELS(x)] | s+[(n)<-[:ASSIGN]-(ticket) | ticket.price][0]) as result
+ORDER BY result ASC
+LIMIT 1
