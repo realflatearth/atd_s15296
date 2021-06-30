@@ -1,0 +1,64 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvv/6ebcxRCiRMY+VIUkp8BZfFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s15296>; rel="up"
+Last-Modified: Wed, 30 Jun 2021 17:14:10 GMT
+ETag: "6Ibq23k2lb44ROsfXAwijR"
+Date: Wed, 30 Jun 2021 17:26:45 GMT
+Content-Type: application/json
+Content-Length: 82
+
+{'name': 'Remigiusz Mroz', 'nationality': 'Poland', 'age':'34', 'portfolio': '43'}
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvv/6bV4TRCiRMY+VIUcl8BZfFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s15296>; rel="up"
+Last-Modified: Wed, 30 Jun 2021 17:22:52 GMT
+ETag: "7XlWGAV3Wrskxi9lESJldX"
+Date: Wed, 30 Jun 2021 17:29:00 GMT
+Content-Type: application/json
+Content-Length: 85
+
+{'name': 'Andrzej Sapkowski', 'nationality': 'Poland', 'age':'73', 'portfolio': '21'}\
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvv/6eXc0RCiRMY+VoVAl8BZfFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s15296>; rel="up"
+Last-Modified: Wed, 30 Jun 2021 17:22:57 GMT
+ETag: "JWpnn4wCnaibI0jlE0hUg"
+Date: Wed, 30 Jun 2021 17:29:14 GMT
+Content-Type: application/json
+Content-Length: 82
+
+{'name': 'Olga Tokarczuk', 'nationality': 'Poland', 'age':'59', 'portfolio': '17'}
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvv/61TEEIpTImMfKUKYSeIsvCwA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s15296>; rel="up"
+Last-Modified: Wed, 30 Jun 2021 17:23:02 GMT
+ETag: "2iiTW6ymNTUDJ1asklTges"
+Date: Wed, 30 Jun 2021 17:29:28 GMT
+Content-Type: application/json
+Content-Length: 89
+
+{'name': 'Marta Galewska-Kustra', 'nationality': 'Poland', 'age':'42', 'portfolio': '23'}
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvv/6eW84RCiRMY+VoUYl8BZfFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s15296>; rel="up"
+Last-Modified: Wed, 30 Jun 2021 17:23:08 GMT
+ETag: "2ESqQXsdAP6owpwSQnRxqB"
+Date: Wed, 30 Jun 2021 17:29:40 GMT
+Content-Type: application/json
+Content-Length: 82
+
+{'name': 'Blanka Lipinska', 'nationality': 'Poland', 'age':'35', 'portfolio': '3'}

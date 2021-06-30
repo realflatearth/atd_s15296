@@ -1,0 +1,33 @@
+1.
+curl –XPUT -H "Content-Type: application/json" -d "{'name': 'Remigiusz Mroz', 'nationality': 'Poland', 'age':'34', 'portfolio': '43'}"  http://localhost:8098/buckets/s15296/keys/Mroz
+curl –XPUT -H "Content-Type: application/json" -d "{'name': 'Andrzej Sapkowski', 'nationality': 'Poland', 'age':'73', 'portfolio': '21'}"  http://localhost:8098/buckets/s15296/keys/Sapkowski
+curl –XPUT -H "Content-Type: application/json" -d "{'name': 'Olga Tokarczuk', 'nationality': 'Poland', 'age':'59', 'portfolio': '17'}"  http://localhost:8098/buckets/s15296/keys/Tokarczuk
+curl –XPUT -H "Content-Type: application/json" -d "{'name': 'Marta Galewska-Kustra', 'nationality': 'Poland', 'age':'42', 'portfolio': '23'}"  http://localhost:8098/buckets/s15296/keys/Galewska
+curl –XPUT -H "Content-Type: application/json" -d "{'name': 'Blanka Lipinska', 'nationality': 'Poland', 'age':'35', 'portfolio': '3'}"  http://localhost:8098/buckets/s15296/keys/Lipinska
+
+2.
+curl -i -XGET http://localhost:8098/buckets/s15296/keys/Sapkowski
+
+3.
+curl -i –XPUT -H "Content-Type: application/json" -d "{'name': 'Andrzej Sapkowski', 'nationality': 'Poland', 'age':'73', 'portfolio': '21', 'bestseller': 'The Witcher'}" http://localhost:8098/buckets/s15296/keys/Sapkowski
+
+4.
+curl -i -XPUT -H "Content-Type: application/json" -d "{'name': 'Andrzej Sapkowski', 'nationality': 'Poland', 'age':'73', 'portfolio': '21'}" http://localhost:8098/buckets/s15296/keys/Sapkowski
+
+5.
+curl -i -XPUT -H "Content-Type: application/json" -d "{'name': 'Andrzej Sapkowski', 'nationality': 'Poland', 'age':'73', 'portfolio': '6'}" http://localhost:8098/buckets/s15296/keys/Sapkowski
+
+6.
+curl -i -XDELETE http://localhost:8098/buckets/s15296/keys/Lipinska
+
+7.
+curl -i -XGET http://localhost:8098/buckets/s15296/keys/Witcher
+
+8.
+curl -i -XPOST -H "Content-Type: application/json" -d "{'cos': 'siema'}" http://localhost:8098/buckets/s15296/keys
+
+9.
+curl -i -XGET http://localhost:8098/buckets/s15296/keys/BlTyZTs1BcDKqvZsHait3V6loqV
+
+10.
+curl -i -XDELETE http://localhost:8098/buckets/s15296/keys/BlTyZTs1BcDKqvZsHait3V6loqV

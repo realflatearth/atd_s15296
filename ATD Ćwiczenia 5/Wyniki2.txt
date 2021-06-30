@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvv/6bV4TRCiRMY+VIUcl8BZfFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s15296>; rel="up"
+Last-Modified: Wed, 30 Jun 2021 17:22:52 GMT
+ETag: "7XlWGAV3Wrskxi9lESJldX"
+Date: Wed, 30 Jun 2021 17:30:41 GMT
+Content-Type: application/json
+Content-Length: 85
+
+{'name': 'Andrzej Sapkowski', 'nationality': 'Poland', 'age':'73', 'portfolio': '21'}
